@@ -1,5 +1,6 @@
 import 'package:flutter_application_1/ui/views/add_extra_charges/add_extra_charges_view.dart';
 import 'package:flutter_application_1/ui/views/add_new_veune/add_new_veune_view.dart';
+import 'package:flutter_application_1/ui/views/convert_to_sales/convert_to_sales_view.dart';
 import 'package:flutter_application_1/ui/views/feedback_form_add_questions/feedback_form_add_questions_view.dart';
 import 'package:flutter_application_1/ui/views/feedback_forms/feedback_forms_view.dart';
 import 'package:flutter_application_1/ui/views/feedback_results/feedback_results_view.dart';
@@ -22,6 +23,8 @@ import 'package:flutter_application_1/ui/views/qr_menu_display_options/qr_menu_d
 import 'package:flutter_application_1/ui/views/qr_menu_feedback/qr_menu_feedback_view.dart';
 import 'package:flutter_application_1/ui/views/qr_menu_ordering/qr_menu_ordering_view.dart';
 import 'package:flutter_application_1/ui/views/qr_menu_qr_settings/qr_menu_qr_settings_view.dart';
+import 'package:flutter_application_1/ui/views/sales/sales_view.dart';
+import 'package:flutter_application_1/ui/views/success_sales/success_sales_view.dart';
 import 'package:flutter_application_1/ui/views/translation/translation_view.dart';
 import 'package:flutter_application_1/ui/views/translation_item/translation_item_view.dart';
 import 'package:flutter_application_1/ui/views/translation_modifires/translation_modifires_view.dart';
@@ -70,6 +73,9 @@ import 'package:stacked_services/stacked_services.dart';
     MaterialRoute(page: TranslationItemView),
     MaterialRoute(page: TranslationModifiresView),
     MaterialRoute(page: TranslationSurveyView),
+    MaterialRoute(page: SalesView),
+    MaterialRoute(page: SuccessSalesView),
+    MaterialRoute(page: ConvertToSalesView),
     MaterialRoute(page: LoginView, initial: true),
   ],
   dependencies: [Singleton(classType: NavigationService)],

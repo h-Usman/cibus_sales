@@ -2,11 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ui/theme/cibus.colors.dart';
-import 'package:flutter_application_1/ui/theme/cibus.theme.helpers.dart';
 import 'package:flutter_application_1/ui/widgets/dumb_widgets/left_menu_item.widget.dart';
 import 'package:flutter_application_1/ui/widgets/dumb_widgets/top_logo.widget.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:stacked/stacked.dart';
 
@@ -41,94 +39,85 @@ class MainNavigationMenuWidgetView extends StatelessWidget {
                     top: 6.23.sp,
                   )),
                   LeftMenuItemWidget(
-                    iconUrl: "../assets/imges/v-home.svg",
+                    iconUrl: "../assets/imges/dashboard.svg",
                     menuName: "Dashboard",
                     isSelected: model.curUrl == "/home-view" ? true : false,
                     goToPageRequested: () => model.goToRequestedPage('home'),
                   ),
                   LeftMenuItemWidget(
-                    iconUrl: "../assets/imges/reports.svg",
-                    menuName: "Reports",
-                    isSelected: model.curUrl == "/master-view" ? true : false,
-                    goToPageRequested: () => model.goToRequestedPage('master'),
-                  ),
-                  LeftMenuItemWidget(
-                    iconUrl: "../assets/imges/v-order.svg",
-                    menuName: "Orders",
+                    iconUrl: "../assets/imges/leads.svg",
+                    menuName: "Leads",
                     isSelected: model.curUrl == "/orders-view" ? true : false,
                     goToPageRequested: () => model.goToRequestedPage("orders"),
                   ),
+
                   LeftMenuItemWidget(
-                    iconUrl: "../assets/imges/v-menu.svg",
-                    menuName: "Manage Menu",
-                    isSelected: model.curUrl == "/menu-management-menu-view"
-                        ? true
-                        : false,
-                    goToPageRequested: () => model.goToRequestedPage("meun"),
+                    iconUrl: "../assets/imges/sales.svg",
+                    menuName: "Sales",
+                    isSelected: model.curUrl == "/sales-view" ? true : false,
+                    goToPageRequested: () => model.goToRequestedPage("sales"),
                   ),
                   LeftMenuItemWidget(
-                    iconUrl: "../assets/imges/feedbacks.svg",
-                    menuName: "Feedbacks",
+                    iconUrl: "../assets/imges/commision.svg",
+                    menuName: "Commissiom",
                     isSelected:
-                        model.curUrl == "/feedback-results-view" ? true : false,
-                    goToPageRequested: () =>
-                        model.goToRequestedPage("fb_result"),
+                        model.curUrl == "/commition-view" ? true : false,
+                    goToPageRequested: () => model.goToRequestedPage(""),
                   ),
                   LeftMenuItemWidget(
-                    iconUrl: "../assets/imges/v-venue.svg",
-                    menuName: "Venue Settings",
-                    isSelected:
-                        model.curUrl == "/add-new-veune-view" ? true : false,
-                    goToPageRequested: () => model.goToRequestedPage("venue"),
+                    iconUrl: "../assets/imges/claims.svg",
+                    menuName: "Claims",
+                    isSelected: model.curUrl == "/claims-view" ? true : false,
+                    goToPageRequested: () => model.goToRequestedPage(""),
                   ),
                   LeftMenuItemWidget(
-                    iconUrl: "../assets/imges/translate.svg",
-                    menuName: "Traslations",
-                    isSelected:
-                        model.curUrl == "/translation-view" ? true : false,
-                    goToPageRequested: () =>
-                        model.goToRequestedPage("translation"),
+                    iconUrl: "../assets/imges/help-rounded.svg",
+                    menuName: "Get Help",
+                    isSelected: model.curUrl == "/help-view" ? true : false,
+                    goToPageRequested: () => model.goToRequestedPage(""),
                   ),
-                  LeftMenuItemWidget(
-                    iconUrl: "../assets/imges/integ.svg",
-                    menuName: "Integrations",
-                    isSelected: model.curUrl == "/integrations" ? true : false,
-                    goToPageRequested: () => model.goToRequestedPage("home"),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                      bottom: 13.20.sp,
-                    ),
-                  ),
+                  // LeftMenuItemWidget(
+                  //   iconUrl: "../assets/imges/integ.svg",
+                  //   menuName: "Integrations",
+                  //   isSelected: model.curUrl == "/integrations" ? true : false,
+                  //   goToPageRequested: () => model.goToRequestedPage("home"),
+                  // ),
+                  // Padding(
+                  //   padding: EdgeInsets.only(
+                  //     bottom: 13.20.sp,
+                  //   ),
+                  // ),
                 ],
               ),
               Align(
                 alignment: Alignment.bottomLeft,
                 child: Container(
-                  height: 40.sp,
+                  height: 10.76923.sp,
                   color: ccNetural350,
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
-                        height: 4.50.sp,
-                        child: Text(
-                          "App Configuration",
-                          style: GoogleFonts.sen(
-                            color: ccNutural550,
-                            fontSize: 3.73.sp,
-                          ),
-                        ),
-                      ),
-                      csvertSpace2,
-                      LeftMenuItemWidget(
-                        iconUrl: "../assets/imges/qr.svg",
-                        menuName: "Dine-in QR Menu",
-                        isSelected: model.curUrl == "/qr-menu-qr-settings-view"
-                            ? true
-                            : false,
-                        goToPageRequested: () => model.goToRequestedPage("qr"),
-                      ),
-                      csvertSpace8,
+                      // SizedBox(
+                      //   height: 4.50.sp,
+                      //   child: Text(
+                      //     "App Configuration",
+                      //     style: GoogleFonts.sen(
+                      //       color: ccNutural550,
+                      //       fontSize: 3.73.sp,
+                      //     ),
+                      //   ),
+                      // ),
+                      // csvertSpace2,
+                      // LeftMenuItemWidget(
+                      //   iconUrl: "../assets/imges/qr.svg",
+                      //   menuName: "Dine-in QR Menu",
+                      //   isSelected: model.curUrl == "/qr-menu-qr-settings-view"
+                      // ? true
+                      //       : false,
+                      //   goToPageRequested: () => model.goToRequestedPage("qr"),
+                      // ),
+                      // csvertSpace8,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
@@ -65,66 +64,62 @@ class MulriOrderListSelectItemWidget extends StatelessWidget {
                     ),
                   ),
                   Padding(padding: EdgeInsets.only(left: 5.72.sp)),
-                  Text(
-                    idNo,
-                    style: GoogleFonts.sen(
-                      color: const Color(0xFF70708C),
-                      fontSize: 3.95.sp,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  Padding(
-                      padding: EdgeInsets.only(
-                    left: 7.25.sp,
-                  )),
                   SizedBox(
-                    width: 20.sp,
+                    width: 41.75824.sp,
                     child: Text(
-                      status,
+                      "Restaurant Chef n Stuff",
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                      softWrap: false,
                       style: GoogleFonts.sen(
-                        color: status == "Accepted"
-                            ? ccPrimary800
-                            : status == "Cancelled"
-                                ? ccDanger500
-                                : status == "Preparing"
-                                    ? ccInfo200
-                                    : status == "Waiting"
-                                        ? ccSecondary50
-                                        : status == "Ready"
-                                            ? ccSuccess800
-                                            : status == "Ready"
-                                                ? ccSuccess800
-                                                : status == "Closed"
-                                                    ? ccInfo700
-                                                    : ccPrimary700,
+                        color: const Color(0xFF70708C),
                         fontSize: 3.95.sp,
                         fontWeight: FontWeight.w400,
                       ),
-                    ),
-                  ),
-                  Padding(
-                      padding: EdgeInsets.only(left: 1.09.sp, right: 1.09.sp)),
-                  SizedBox(
-                    child: SvgPicture.asset(
-                      "../assets/imges/${status.toLowerCase()}.svg",
-                      width: 4.83.sp,
-                      height: 4.83.sp,
                     ),
                   ),
                 ],
               ),
               Padding(padding: EdgeInsets.only(left: 1.75.sp)),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(padding: EdgeInsets.only(left: 7.69.sp)),
-                  Text(
-                    "Table no. 2",
-                    style: GoogleFonts.sen(
-                      color: const Color(0xFF70708C),
-                      fontSize: 3.95.sp,
-                      fontWeight: FontWeight.w400,
+                  SizedBox(
+                    width: 31.208791.sp,
+                    child: Text(
+                      overflow: TextOverflow.ellipsis,
+                      status,
+                      style: GoogleFonts.sen(
+                        color: status == "In Progress"
+                            ? ccSuccess800
+                            : status == "Cancelled"
+                                ? ccDanger500
+                                : status == "KIV"
+                                    ? ccInfo700
+                                    : ccPrimary700,
+                        fontSize: 3.95.sp,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 11.428571.sp,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          overflow: TextOverflow.ellipsis,
+                          idNo,
+                          style: GoogleFonts.sen(
+                            color: ccNetural1000,
+                            fontSize: 3.95.sp,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],

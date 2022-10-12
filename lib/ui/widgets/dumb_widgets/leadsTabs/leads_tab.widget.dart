@@ -4,10 +4,10 @@ import 'package:flutter_application_1/ui/theme/cibus.theme.helpers.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
-class OrdersTabsWidget extends StatelessWidget {
+class LeadsTabsWidget extends StatelessWidget {
   final String selectedTabName;
   final Function goToPageRequested;
-  const OrdersTabsWidget({
+  const LeadsTabsWidget({
     Key? key,
     required this.selectedTabName,
     required this.goToPageRequested,
@@ -124,15 +124,15 @@ class OrdersTabsWidget extends StatelessWidget {
                               border: Border(
                                   bottom: BorderSide(
                             width: 0.5,
-                            color: selectedTabName == "new"
+                            color: selectedTabName == "progress"
                                 ? ccDanger300
                                 : ccNeutral0,
                           ))),
                           child: Row(
                             children: [
                               Text(
-                                "New",
-                                style: selectedTabName == "new"
+                                "In Progress",
+                                style: selectedTabName == "progress"
                                     ? GoogleFonts.sen(
                                         color: ccDanger300,
                                         fontSize: 4.395.sp,
@@ -158,8 +158,8 @@ class OrdersTabsWidget extends StatelessWidget {
                                   ),
                                   child: Center(
                                     child: Text(
-                                      "7",
-                                      style: selectedTabName == "new"
+                                      "6",
+                                      style: selectedTabName == "progress"
                                           ? GoogleFonts.sen(
                                               color: ccDanger300,
                                               fontSize: 2.63.sp,
@@ -200,15 +200,15 @@ class OrdersTabsWidget extends StatelessWidget {
                                 border: Border(
                                     bottom: BorderSide(
                               width: 0.5,
-                              color: selectedTabName == "preparing"
+                              color: selectedTabName == "kiv"
                                   ? ccDanger300
                                   : ccNeutral0,
                             ))),
                             child: Row(
                               children: [
                                 Text(
-                                  "Preparing",
-                                  style: selectedTabName == "preparing"
+                                  "KIV",
+                                  style: selectedTabName == "kiv"
                                       ? GoogleFonts.sen(
                                           color: ccDanger300,
                                           fontSize: 4.395.sp,
@@ -235,8 +235,8 @@ class OrdersTabsWidget extends StatelessWidget {
                                     ),
                                     child: Center(
                                       child: Text(
-                                        "7",
-                                        style: selectedTabName == "preparing"
+                                        "1",
+                                        style: selectedTabName == "kiv"
                                             ? GoogleFonts.sen(
                                                 color: ccDanger300,
                                                 fontSize: 2.63.sp,
@@ -275,15 +275,15 @@ class OrdersTabsWidget extends StatelessWidget {
                               border: Border(
                                   bottom: BorderSide(
                             width: 0.5,
-                            color: selectedTabName == "ready"
+                            color: selectedTabName == "cancel"
                                 ? ccDanger300
                                 : ccNeutral0,
                           ))),
                           child: Row(
                             children: [
                               Text(
-                                "Ready",
-                                style: selectedTabName == "ready"
+                                "Cancelled",
+                                style: selectedTabName == "cancel"
                                     ? GoogleFonts.sen(
                                         color: ccDanger300,
                                         fontSize: 4.395.sp,
@@ -309,8 +309,8 @@ class OrdersTabsWidget extends StatelessWidget {
                                   ),
                                   child: Center(
                                     child: Text(
-                                      "7",
-                                      style: selectedTabName == "ready"
+                                      "2",
+                                      style: selectedTabName == "cancel"
                                           ? GoogleFonts.sen(
                                               color: ccDanger300,
                                               fontSize: 2.63.sp,

@@ -82,17 +82,17 @@ class LoginView extends StatelessWidget {
                             Container(
                               width: 168.79.sp,
                               height: 93.9.h,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                   border: Border(
                                       right: BorderSide(
-                                width: 1.0,
+                                width: 0.21978.sp,
                                 color: ccNatural250,
                               ))),
                               child: Center(
                                 child: Image.asset(
-                                  "../assets/imges/login-scan.png",
-                                  height: 112.52.sp,
-                                  width: 168.79.sp,
+                                  "../assets/imges/sales-login.png",
+                                  height: 106.8769.sp,
+                                  width: 144.4747.sp,
                                 ),
                               ),
                             ),
@@ -285,9 +285,9 @@ class LoginView extends StatelessWidget {
                                             },
                                             child: Text(
                                               'Sign In',
-                                              style: TextStyle(
+                                              style: GoogleFonts.sen(
                                                   fontSize: 5.05.sp,
-                                                  fontWeight: FontWeight.bold),
+                                                  fontWeight: FontWeight.w700),
                                             ),
                                           )),
                                       Padding(

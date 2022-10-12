@@ -12,6 +12,7 @@ import 'package:stacked_services/stacked_services.dart';
 
 import '../ui/views/add_extra_charges/add_extra_charges_view.dart';
 import '../ui/views/add_new_veune/add_new_veune_view.dart';
+import '../ui/views/convert_to_sales/convert_to_sales_view.dart';
 import '../ui/views/feedback_form_add_questions/feedback_form_add_questions_view.dart';
 import '../ui/views/feedback_forms/feedback_forms_view.dart';
 import '../ui/views/feedback_results/feedback_results_view.dart';
@@ -34,6 +35,8 @@ import '../ui/views/qr_menu_display_options/qr_menu_display_options_view.dart';
 import '../ui/views/qr_menu_feedback/qr_menu_feedback_view.dart';
 import '../ui/views/qr_menu_ordering/qr_menu_ordering_view.dart';
 import '../ui/views/qr_menu_qr_settings/qr_menu_qr_settings_view.dart';
+import '../ui/views/sales/sales_view.dart';
+import '../ui/views/success_sales/success_sales_view.dart';
 import '../ui/views/translation/translation_view.dart';
 import '../ui/views/translation_item/translation_item_view.dart';
 import '../ui/views/translation_modifires/translation_modifires_view.dart';
@@ -86,6 +89,9 @@ class Routes {
   static const String translationItemView = '/translation-item-view';
   static const String translationModifiresView = '/translation-modifires-view';
   static const String translationSurveyView = '/translation-survey-view';
+  static const String salesView = '/sales-view';
+  static const String successSalesView = '/success-sales-view';
+  static const String convertToSalesView = '/convert-to-sales-view';
   static const String loginView = '/';
   static const all = <String>{
     homeView,
@@ -121,6 +127,9 @@ class Routes {
     translationItemView,
     translationModifiresView,
     translationSurveyView,
+    salesView,
+    successSalesView,
+    convertToSalesView,
     loginView,
   };
 }
@@ -167,6 +176,9 @@ class StackedRouter extends RouterBase {
     RouteDef(Routes.translationItemView, page: TranslationItemView),
     RouteDef(Routes.translationModifiresView, page: TranslationModifiresView),
     RouteDef(Routes.translationSurveyView, page: TranslationSurveyView),
+    RouteDef(Routes.salesView, page: SalesView),
+    RouteDef(Routes.successSalesView, page: SuccessSalesView),
+    RouteDef(Routes.convertToSalesView, page: ConvertToSalesView),
     RouteDef(Routes.loginView, page: LoginView),
   ];
   @override
@@ -370,6 +382,24 @@ class StackedRouter extends RouterBase {
     TranslationSurveyView: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => const TranslationSurveyView(),
+        settings: data,
+      );
+    },
+    SalesView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const SalesView(),
+        settings: data,
+      );
+    },
+    SuccessSalesView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const SuccessSalesView(),
+        settings: data,
+      );
+    },
+    ConvertToSalesView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const ConvertToSalesView(),
         settings: data,
       );
     },
@@ -920,6 +950,54 @@ extension NavigatorStateExtension on NavigationService {
   }) async {
     return navigateTo(
       Routes.translationSurveyView,
+      id: routerId,
+      preventDuplicates: preventDuplicates,
+      parameters: parameters,
+      transition: transition,
+    );
+  }
+
+  Future<dynamic> navigateToSalesView({
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  }) async {
+    return navigateTo(
+      Routes.salesView,
+      id: routerId,
+      preventDuplicates: preventDuplicates,
+      parameters: parameters,
+      transition: transition,
+    );
+  }
+
+  Future<dynamic> navigateToSuccessSalesView({
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  }) async {
+    return navigateTo(
+      Routes.successSalesView,
+      id: routerId,
+      preventDuplicates: preventDuplicates,
+      parameters: parameters,
+      transition: transition,
+    );
+  }
+
+  Future<dynamic> navigateToConvertToSalesView({
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  }) async {
+    return navigateTo(
+      Routes.convertToSalesView,
       id: routerId,
       preventDuplicates: preventDuplicates,
       parameters: parameters,

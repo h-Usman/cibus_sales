@@ -27,42 +27,9 @@ class TopHeaderWidget extends StatelessWidget {
         ),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Column(mainAxisAlignment: MainAxisAlignment.center,
-              // width: 10.w,
-              children: [
-                SizedBox(
-                  child: InkWell(
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          "../assets/imges/add-new.svg",
-                          // height: 20.sp,
-                          width: 4.8.sp,
-                        ),
-                        Padding(padding: EdgeInsets.only(left: 3.29.sp)),
-                        Text(
-                          "Add venue",
-                          style: GoogleFonts.sen(
-                            color: ccDanger300,
-                            fontSize: 3.95.sp,
-                          ),
-                        ),
-                      ],
-                    ),
-                    onTap: () {},
-                  ),
-                ),
-              ]),
-          Text(
-            "Chef n Stuff, Welcome!",
-            style: GoogleFonts.sen(
-              color: ccDanger300,
-              fontSize: 5.sp,
-            ),
-          ),
           Column(mainAxisAlignment: MainAxisAlignment.center,
               // width: 10.w,
               children: [
@@ -75,6 +42,145 @@ class TopHeaderWidget extends StatelessWidget {
                         fontSize: 3.95.sp,
                       ),
                     ),
+                    DropdownButton(
+                      icon: SvgPicture.asset(
+                        "../assets/imges/dropdown.svg",
+                        width: 2.857.sp,
+                        height: 1.53846.sp,
+                      ),
+                      underline: Container(
+                        height: 0.0,
+                        color: Colors.transparent,
+                      ),
+                      elevation: 0,
+                      items: [
+                        DropdownMenuItem(
+                          value: "Abbas Ali",
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                "../assets/imges/nameProfile.svg",
+                                width: 6.5934.sp,
+                                height: 6.5934.sp,
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.only(right: 2.637.sp)),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Abbas Ali",
+                                    style: GoogleFonts.sen(
+                                      color: ccDanger300,
+                                      fontSize: 3.076.sp,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                  Text(
+                                    "abbas@hello.com",
+                                    style: GoogleFonts.sen(
+                                      color: ccNutural550,
+                                      fontSize: 2.19780.sp,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        DropdownMenuItem(
+                          value: "profile",
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                "../assets/imges/profile-r.svg",
+                                width: 3.2967.sp,
+                                height: 3.2967.sp,
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.only(right: 2.637.sp)),
+                              Text(
+                                "Profile",
+                                style: GoogleFonts.sen(
+                                  color: ccNutural550,
+                                  fontSize: 3.076.sp,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        DropdownMenuItem(
+                          value: "Change Password",
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                "../assets/imges/password-r.svg",
+                                width: 3.2967.sp,
+                                height: 3.2967.sp,
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.only(right: 2.637.sp)),
+                              Text(
+                                "Change Password",
+                                style: GoogleFonts.sen(
+                                  color: ccNutural550,
+                                  fontSize: 3.076.sp,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        DropdownMenuItem(
+                          value: "Help",
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                "../assets/imges/help-r.svg",
+                                width: 2.883516.sp,
+                                height: 2.883516.sp,
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.only(right: 2.637.sp)),
+                              Text(
+                                "Help",
+                                style: GoogleFonts.sen(
+                                  color: ccNutural550,
+                                  fontSize: 3.076.sp,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        DropdownMenuItem(
+                          value: "Log Out",
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                "../assets/imges/logout.svg",
+                                width: 3.2967.sp,
+                                height: 3.2967.sp,
+                              ),
+                              Padding(
+                                  padding: EdgeInsets.only(right: 2.637.sp)),
+                              Text(
+                                "Log Out",
+                                style: GoogleFonts.sen(
+                                  color: ccNutural550,
+                                  fontSize: 3.076.sp,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                      onChanged: (value) {},
+                    ),
                     Padding(padding: EdgeInsets.only(right: 3.29.sp)),
                     Stack(
                       children: [
@@ -84,12 +190,6 @@ class TopHeaderWidget extends StatelessWidget {
                           width: 5.sp,
                         ),
                       ],
-                    ),
-                    Padding(padding: EdgeInsets.only(right: 3.29.sp)),
-                    SvgPicture.asset(
-                      "../assets/imges/settings.svg",
-                      // height: 20.sp,
-                      width: 5.sp,
                     ),
                     Padding(padding: EdgeInsets.only(left: 3.29.sp)),
                     SvgPicture.asset(

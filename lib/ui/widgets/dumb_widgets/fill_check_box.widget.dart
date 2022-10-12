@@ -42,9 +42,9 @@ class FillCheckBoxCircleWidget extends StatelessWidget {
               Text(
                 text,
                 style: GoogleFonts.sen(
-                  fontSize: 4.395.sp,
+                  fontSize: 4.3956.sp,
                   fontWeight: FontWeight.w400,
-                  color: ccNutural550,
+                  color: ccDanger300,
                 ),
               ),
             ],

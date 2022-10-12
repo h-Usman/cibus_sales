@@ -85,11 +85,8 @@ class VenueSettingsLocationView extends StatelessWidget {
                               color: ccNeutral0,
                               child: SingleChildScrollView(
                                 child: Container(
-                                  // height: 90.sp,
                                   width: 100.w,
                                   margin: EdgeInsets.all(3.29.sp),
-                                  // padding: const EdgeInsets.all(5),
-                                  // color: ccNeutral0,
                                   decoration: BoxDecoration(
                                     borderRadius:
                                         BorderRadius.circular(3.29.sp),
@@ -110,12 +107,7 @@ class VenueSettingsLocationView extends StatelessWidget {
                                     //       spreadRadius: 4),
                                     // ],
                                   ),
-                                  // decoration: BoxDecoration(
-                                  // color: Colors.blueAccent,
-                                  child:
-                                      // Column(
-                                      //   children: [
-                                      Row(
+                                  child: Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,

@@ -9,6 +9,7 @@ import 'package:sizer/sizer.dart';
 
 Widget cshorzSpace1 = SizedBox(width: 1.sp);
 Widget cshorzSpace2 = SizedBox(width: 2.sp);
+Widget cshorzSpace3 = SizedBox(width: 3.sp);
 Widget cshorzSpace4 = SizedBox(width: 4.sp);
 Widget cshorzSpace5 = SizedBox(width: 5.sp);
 Widget cshorzSpace7 = SizedBox(width: 7.sp);

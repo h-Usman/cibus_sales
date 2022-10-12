@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ui/theme/cibus.theme.helpers.dart';
+import 'package:flutter_application_1/ui/widgets/dumb_widgets/dashboard_static_tabs.widget.dart';
 // import 'package:flutter_application_1/ui/widgets/dumb_widgets/my_column.widget.dart';
 import 'package:stacked/stacked.dart';
 
 import '../../theme/cibus.colors.dart';
-import '../../widgets/dumb_widgets/dashboard_list_item.widget.dart';
 import '../../widgets/dumb_widgets/footer.widget.dart';
 // import '../../widgets/dumb_widgets/left_menu.widget.dart';
 import '../../widgets/dumb_widgets/top_header.widget.dart';
@@ -40,6 +40,7 @@ class HomeView extends StatelessWidget {
         HomeViewModel model,
         Widget? child,
       ) {
+        String dropdownValue = 'Month';
         return Scaffold(
           backgroundColor: ccNeutral0,
           body: Row(
@@ -57,712 +58,410 @@ class HomeView extends StatelessWidget {
                 child: Stack(
                   children: [
                     SingleChildScrollView(
-                      child: Column(
-                          // mainAxisAlignment: MainAxisAlignment.start,
-                          // crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            csvertSpace16,
-                            Container(
-                              padding: EdgeInsets.only(
-                                left: 3.29.sp,
-                                right: 3.29.sp,
-                                // top: 20.sp,
-                              ),
-                              // margin: const EdgeInsets.all(15),
-                              height: 12.sp,
-                              color: ccNeutral0,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: <Widget>[
-                                  Text(
-                                    "Monday 20 June, 2022",
-                                    style: GoogleFonts.sen(
-                                      color: ccNutural550,
-                                      fontSize: 3.51.sp,
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                  Text(
-                                    "10:30 pm",
-                                    style: GoogleFonts.sen(
-                                      color: ccNutural550,
-                                      fontSize: 3.95.sp,
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              color: ccNeutral0,
-                              child: Container(
-                                height: 67.03.sp,
-                                width: 100.w,
-                                margin: EdgeInsets.all(3.29.sp),
-                                // padding: const EdgeInsets.all(5),
-                                // color: ccNeutral0,
+                      child: Column(children: [
+                        csvertSpace16,
+                        Container(
+                          padding: EdgeInsets.only(left: 3.sp, right: 4.sp),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                  left: 3.076923.sp,
+                                  right: 3.076923.sp,
+                                  top: 3.27472.sp,
+                                  bottom: 5.27472.sp,
+                                ),
+                                width: 78.sp,
+                                height: 83.sp,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(3.296.sp),
+                                  borderRadius:
+                                      BorderRadius.circular(3.5164835.sp),
                                   border: Border.all(
                                       color: ccNutural550, width: 0.5),
-                                  //         // color: Colors.transparent,
-                                  //         // border: const Border(
-                                  //         //   left: BorderSide(
-                                  //         //     color: Colors.green,
-                                  //         //     width: 3,
-                                  //         //   ),
-                                  //         // ),
-
-                                  //         // boxShadow: const [
-                                  //         //   BoxShadow(
-                                  //         //       color: ccNutural550,
-                                  //         //       spreadRadius: 1)
-                                  //         // ],
+                                  color: ccNeutral0,
+                                  boxShadow: cbssShadowBase,
                                 ),
-                                //     // decoration: BoxDecoration(
-                                //     // color: Colors.blueAccent,
                                 child: Column(
                                   children: [
                                     Container(
-                                      decoration: const BoxDecoration(
-                                        border: Border(
-                                          bottom: BorderSide(
-                                              color: ccNutural550, width: 0.5),
-                                        ),
+                                      padding: EdgeInsets.only(
+                                        bottom: 5.27472.sp,
                                       ),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 3.29.sp)),
-                                          Expanded(
-                                            child: SizedBox(
-                                              height: 14.06.sp,
-                                              width: 20.w,
-                                              // color: Colors.red,
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.start,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: <Widget>[
-                                                  Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      SizedBox(
-                                                        child: Text(
-                                                          "Today, 23 June, 2022",
-                                                          style:
-                                                              GoogleFonts.sen(
-                                                            color: ccNutural550,
-                                                            fontSize: 3.95.sp,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: SizedBox(
-                                              height: 14.06.sp,
-
-                                              // color: Colors.blue,
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.end,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: <Widget>[
-                                                  Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      SizedBox(
-                                                        child: SvgPicture.asset(
-                                                          "../assets/imges/v-reports.svg",
-                                                          // height: 20.sp,
-                                                          width: 4.sp,
-                                                        ),
-                                                      ),
-                                                      const Padding(
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                                  left: 5)),
-                                                      SizedBox(
-                                                        child: Text(
-                                                          "View Reprts",
-                                                          style:
-                                                              GoogleFonts.sen(
-                                                            color: ccDanger300,
-                                                            fontSize: 4.39.sp,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  right: 3.29.sp)),
-                                        ],
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: SizedBox(
-                                        // color: ccNeutral0,
-                                        width: double.infinity,
-                                        // height: double.infinity,
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: [
-                                            SizedBox(
-                                              child: Text(
-                                                "Sales and Customer",
-                                                style: GoogleFonts.sen(
-                                                  color: ccDanger300,
-                                                  fontSize: 6.sp,
-                                                  fontWeight: FontWeight.w400,
-                                                ),
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              child: Text(
-                                                "Report Charts",
-                                                style: GoogleFonts.sen(
-                                                  color: ccDanger300,
-                                                  fontSize: 6.sp,
-                                                  fontWeight: FontWeight.w400,
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            // order tables
-                            Container(
-                              color: ccNeutral0,
-                              child: Container(
-                                // height: 90.sp,
-                                width: 100.w,
-                                // height: 125.sp,
-                                margin: EdgeInsets.all(3.29.sp),
-                                // padding: const EdgeInsets.all(5),
-                                // color: ccNeutral0,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(3.296.sp),
-                                  border: Border.all(
-                                      color: ccNutural550, width: 0.5),
-                                  // color: Colors.transparent,
-                                  // border: const Border(
-                                  //   left: BorderSide(
-                                  //     color: Colors.green,
-                                  //     width: 3,
-                                  //   ),
-                                  // ),
-
-                                  // boxShadow: const [
-                                  //   BoxShadow(
-                                  //       color: ccNutural550,
-                                  //       spreadRadius: 1)
-                                  // ],
-                                ),
-                                // decoration: BoxDecoration(
-                                // color: Colors.blueAccent,
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      decoration: const BoxDecoration(
-                                        border: Border(
-                                          bottom: BorderSide(
-                                              color: ccNutural550, width: 0.5),
-                                        ),
-                                      ),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  left: 3.29.sp)),
-                                          Expanded(
-                                            child: SizedBox(
-                                              height: 14.06.sp,
-                                              // width: 20.w,
-                                              // color: Colors.red,
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.start,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: <Widget>[
-                                                  Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      SizedBox(
-                                                        child: Text(
-                                                          "Recent Orders",
-                                                          style:
-                                                              GoogleFonts.sen(
-                                                            color: ccNutural550,
-                                                            fontSize: 3.95.sp,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: SizedBox(
-                                              height: 14.06.sp,
-                                              width: 10.98.sp,
-                                              // color: Colors.blue,
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.end,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: <Widget>[
-                                                  Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      SizedBox(
-                                                        child: SvgPicture.asset(
-                                                          "../assets/imges/v-order.svg",
-                                                          // height: 20.sp,
-                                                          width: 4.sp,
-                                                        ),
-                                                      ),
-                                                      const Padding(
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                                  left: 5)),
-                                                      SizedBox(
-                                                        child: Text(
-                                                          "View Orders",
-                                                          style:
-                                                              GoogleFonts.sen(
-                                                            color: ccDanger300,
-                                                            fontSize: 4.39.sp,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Padding(
-                                              padding: EdgeInsets.only(
-                                                  right: 3.29.sp)),
-                                        ],
-                                      ),
-                                    ),
-                                    SizedBox(
                                       child: Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.center,
                                         children: [
-                                          // const Padding(
-                                          // padding:
-                                          //     EdgeInsets.only(left: 3.296.sp,
-                                          Expanded(
-                                            child: Container(
-                                              height: 6.6.sp,
-                                              // width: 20.w,
-                                              // color: Colors.red,
-                                              decoration: const BoxDecoration(
-                                                  border: Border(
-                                                      right: BorderSide(
-                                                width: 0.5,
+                                          Text(
+                                            "Sales report",
+                                            style: GoogleFonts.sen(
+                                              color: ccNutural550,
+                                              fontSize: 3.7362.sp,
+                                              fontWeight: FontWeight.w700,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 14.626373.sp,
+                                            child: DropdownButton<String>(
+                                              value: dropdownValue,
+                                              icon: Icon(
+                                                Icons.keyboard_arrow_down,
                                                 color: ccNutural550,
-                                              ))),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: <Widget>[
-                                                  Row(
+                                                size: 5.395.sp,
+                                              ),
+                                              elevation: 16,
+                                              isExpanded: true,
+                                              // isDense: true,
+                                              // style: TextStyle(
+                                              //   color: ccNutural550,
+                                              //   fontSize: 3.076923.sp,
+                                              // ),
+                                              style: GoogleFonts.sen(
+                                                color: ccNutural550,
+                                                fontSize: 3.07692.sp,
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                              underline: Container(
+                                                height: 0.0,
+                                                color: Colors.transparent,
+                                              ),
+                                              onChanged: (String? newValue) {
+                                                // setState(() {
+                                                //   dropdownValue = newValue!;
+                                                // });
+                                              },
+                                              items: <String>[
+                                                'Day',
+                                                'Month',
+                                                'Year',
+                                              ].map<DropdownMenuItem<String>>(
+                                                  (String value) {
+                                                return DropdownMenuItem<String>(
+                                                  value: value,
+                                                  child: Row(
                                                     mainAxisAlignment:
-                                                        MainAxisAlignment
+                                                        MainAxisAlignment.start,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
                                                             .center,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
                                                     children: [
-                                                      Text(
-                                                        "ID",
-                                                        style: GoogleFonts.sen(
-                                                          color: ccDanger300,
-                                                          fontSize: 3.95.sp,
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                        ),
-                                                      ),
+                                                      // Padding(
+                                                      // padding:
+                                                      //     EdgeInsets.only(
+                                                      //         left:
+                                                      //             3.29.sp)),
+                                                      Text(value),
                                                     ],
                                                   ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: Container(
-                                              height: 6.6.sp,
-                                              // width: 20.w,
-                                              // color: Colors.red,
-                                              decoration: const BoxDecoration(
-                                                  border: Border(
-                                                      right: BorderSide(
-                                                width: 0.5,
-                                                color: ccNutural550,
-                                              ))),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: <Widget>[
-                                                  Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      SizedBox(
-                                                        child: Text(
-                                                          "Daily No.",
-                                                          style:
-                                                              GoogleFonts.sen(
-                                                            color: ccDanger300,
-                                                            fontSize: 3.95.sp,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Container(
-                                            height: 6.6.sp,
-                                            width: 32.98.sp,
-                                            decoration: const BoxDecoration(
-                                                border: Border(
-                                                    right: BorderSide(
-                                              width: 0.5,
-                                              color: ccNutural550,
-                                            ))),
-                                            // color: Colors.red,
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              children: <Widget>[
-                                                Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.end,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    SizedBox(
-                                                      // width: 30.98.sp,
-                                                      child: Text(
-                                                        "Status",
-                                                        style: GoogleFonts.sen(
-                                                          color: ccDanger300,
-                                                          fontSize: 3.95.sp,
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          Container(
-                                            height: 6.6.sp,
-                                            width: 30.98.sp,
-                                            // color: Colors.red,
-                                            decoration: const BoxDecoration(
-                                                border: Border(
-                                                    right: BorderSide(
-                                              width: 0.5,
-                                              color: ccNutural550,
-                                            ))),
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              children: <Widget>[
-                                                Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.end,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    SizedBox(
-                                                      child: Text(
-                                                        "Type",
-                                                        style: GoogleFonts.sen(
-                                                          color: ccDanger300,
-                                                          fontSize: 3.95.sp,
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: Container(
-                                              height: 6.6.sp,
-
-                                              // width: 20.w,
-                                              // color: Colors.red,
-                                              decoration: const BoxDecoration(
-                                                  border: Border(
-                                                      right: BorderSide(
-                                                width: 0.5,
-                                                color: ccNutural550,
-                                              ))),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: <Widget>[
-                                                  Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      SizedBox(
-                                                        child: Text(
-                                                          "Table",
-                                                          style:
-                                                              GoogleFonts.sen(
-                                                            color: ccDanger300,
-                                                            fontSize: 3.95.sp,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: Container(
-                                              height: 6.6.sp,
-                                              decoration: const BoxDecoration(
-                                                  border: Border(
-                                                      right: BorderSide(
-                                                width: 0.5,
-                                                color: ccNutural550,
-                                              ))),
-                                              // color: Colors.red,
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: <Widget>[
-                                                  Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      SizedBox(
-                                                        child: Text(
-                                                          "Waiter",
-                                                          style:
-                                                              GoogleFonts.sen(
-                                                            color: ccDanger300,
-                                                            fontSize: 3.95.sp,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Container(
-                                            height: 6.6.sp,
-                                            width: 30.38.sp,
-                                            decoration: const BoxDecoration(
-                                                border: Border(
-                                                    right: BorderSide(
-                                              width: 0.5,
-                                              color: ccNutural550,
-                                            ))),
-                                            // color: Colors.red,
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
-                                              children: <Widget>[
-                                                Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.end,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    SizedBox(
-                                                      child: Text(
-                                                        "Update Time",
-                                                        style: GoogleFonts.sen(
-                                                          color: ccDanger300,
-                                                          fontSize: 3.95.sp,
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: SizedBox(
-                                              height: 10.98.sp,
-                                              // width: 20.w,
-                                              // color: Colors.red,
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: <Widget>[
-                                                  Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      SizedBox(
-                                                        child: Text(
-                                                          "Total",
-                                                          style:
-                                                              GoogleFonts.sen(
-                                                            color: ccDanger300,
-                                                            fontSize: 3.95.sp,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
+                                                );
+                                              }).toList(),
+                                              dropdownColor: ccNeutral0,
                                             ),
                                           ),
                                         ],
                                       ),
                                     ),
+                                    SvgPicture.asset(
+                                      "../assets/imges/sales-chart.svg",
+                                      width: 37.142857.sp,
+                                      height: 37.142857.sp,
+                                    ),
                                     Container(
-                                      height: 80.sp,
-                                      padding: EdgeInsets.only(bottom: 6.96.sp),
-                                      child: ListView.builder(
-                                        itemCount: 8,
-                                        itemBuilder: (context, index) {
-                                          return DashboardListItemWidget(
-                                            goToModalRequested: () {},
-                                            idNo: "1001",
-                                            dailyNo: "1",
-                                            status: "Cancelled",
-                                            type: "Dine-in",
-                                            table: "Table No 2",
-                                            waiter: "Waiter 1",
-                                            updateDate: "Today",
-                                            updateTime: "10:15:00",
-                                            total: "RM 200",
-                                            days: '1 Day Ago',
-                                          );
-                                        },
+                                      padding:
+                                          EdgeInsets.only(top: 5.7142857.sp),
+                                      child: Column(
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  SvgPicture.asset(
+                                                    "../assets/imges/ready-circle.svg",
+                                                    width: 2.19780.sp,
+                                                    height: 2.19780.sp,
+                                                  ),
+                                                  cshorzSpace2,
+                                                  Text("Sales Matured",
+                                                      style: GoogleFonts.sen(
+                                                        color: ccNutural550,
+                                                        fontSize: 3.07692.sp,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                      )),
+                                                ],
+                                              ),
+                                              Text(
+                                                "60.8%",
+                                                style: GoogleFonts.sen(
+                                                  color: ccNutural550,
+                                                  fontSize: 3.07692.sp,
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          csvertSpace2,
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  SvgPicture.asset(
+                                                    "../assets/imges/waiting-cirlce.svg",
+                                                    width: 2.19780.sp,
+                                                    height: 2.19780.sp,
+                                                  ),
+                                                  cshorzSpace2,
+                                                  Text("On going Leads",
+                                                      style: GoogleFonts.sen(
+                                                        color: ccNutural550,
+                                                        fontSize: 3.07692.sp,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                      )),
+                                                ],
+                                              ),
+                                              Text(
+                                                "19.1%",
+                                                style: GoogleFonts.sen(
+                                                  color: ccNutural550,
+                                                  fontSize: 3.07692.sp,
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          csvertSpace2,
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Row(
+                                                children: [
+                                                  SvgPicture.asset(
+                                                    "../assets/imges/failed-circle.svg",
+                                                    width: 2.19780.sp,
+                                                    height: 2.19780.sp,
+                                                  ),
+                                                  cshorzSpace2,
+                                                  Text("Failed",
+                                                      style: GoogleFonts.sen(
+                                                        color: ccNutural550,
+                                                        fontSize: 3.07692.sp,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                      )),
+                                                ],
+                                              ),
+                                              Text(
+                                                "20.1%",
+                                                style: GoogleFonts.sen(
+                                                  color: ccNutural550,
+                                                  fontSize: 3.07692.sp,
+                                                  fontWeight: FontWeight.w400,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
-                            ),
-                            csvertSpace16,
-                          ]),
+                              Container(
+                                padding: EdgeInsets.only(
+                                  left: 3.076923.sp,
+                                  right: 3.076923.sp,
+                                  top: 3.27472.sp,
+                                  bottom: 5.27472.sp,
+                                ),
+                                width: 159.sp,
+                                height: 83.sp,
+                                decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.circular(3.5164835.sp),
+                                  border: Border.all(
+                                      color: ccNutural550, width: 0.5),
+                                  color: ccNeutral0,
+                                  boxShadow: cbssShadowBase,
+                                ),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.only(
+                                        bottom: 5.27472.sp,
+                                      ),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Overall sales",
+                                                style: GoogleFonts.sen(
+                                                  color: ccNutural550,
+                                                  fontSize: 3.7362.sp,
+                                                  fontWeight: FontWeight.w700,
+                                                ),
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Text(
+                                                    "RM56,345.98",
+                                                    style: GoogleFonts.sen(
+                                                      color: ccNetural950,
+                                                      fontSize: 5.71428.sp,
+                                                      fontWeight:
+                                                          FontWeight.w400,
+                                                    ),
+                                                  ),
+                                                  cshorzSpace3,
+                                                  Container(
+                                                    decoration: BoxDecoration(
+                                                      color: ccSuccess900,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              3.296.sp),
+                                                    ),
+                                                    padding: EdgeInsets.only(
+                                                      left: 8,
+                                                      right: 8,
+                                                      top: 4,
+                                                      bottom: 4,
+                                                    ),
+                                                    child: Row(
+                                                      children: [
+                                                        SvgPicture.asset(
+                                                          "../assets/imges/trending-up.svg",
+                                                          width: 3.sp,
+                                                          height: 3.sp,
+                                                        ),
+                                                        cshorzSpace1,
+                                                        Text(
+                                                          "23,5%",
+                                                          style:
+                                                              GoogleFonts.sen(
+                                                            color: ccNeutral0,
+                                                            fontSize:
+                                                                3.5164835.sp,
+                                                            fontWeight:
+                                                                FontWeight.w700,
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            width: 14.626373.sp,
+                                            child: DropdownButton<String>(
+                                              value: dropdownValue,
+                                              icon: Icon(
+                                                Icons.keyboard_arrow_down,
+                                                color: ccNutural550,
+                                                size: 5.395.sp,
+                                              ),
+                                              elevation: 16,
+                                              isExpanded: true,
+                                              // isDense: true,
+                                              // style: TextStyle(
+                                              //   color: ccNutural550,
+                                              //   fontSize: 3.076923.sp,
+                                              // ),
+                                              style: GoogleFonts.sen(
+                                                color: ccNutural550,
+                                                fontSize: 3.07692.sp,
+                                                fontWeight: FontWeight.w400,
+                                              ),
+                                              underline: Container(
+                                                height: 0.0,
+                                                color: Colors.transparent,
+                                              ),
+                                              onChanged: (String? newValue) {
+                                                // setState(() {
+                                                //   dropdownValue = newValue!;
+                                                // });
+                                              },
+                                              items: <String>[
+                                                'Day',
+                                                'Month',
+                                                'Year',
+                                              ].map<DropdownMenuItem<String>>(
+                                                  (String value) {
+                                                return DropdownMenuItem<String>(
+                                                  value: value,
+                                                  child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.start,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      // Padding(
+                                                      // padding:
+                                                      //     EdgeInsets.only(
+                                                      //         left:
+                                                      //             3.29.sp)),
+                                                      Text(value),
+                                                    ],
+                                                  ),
+                                                );
+                                              }).toList(),
+                                              dropdownColor: ccNeutral0,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    SvgPicture.asset(
+                                      "../assets/imges/overall-sales.svg",
+                                      width: 143.362.sp,
+                                      height: 55.60.sp,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        csvertSpace12,
+                        Container(
+                          padding: EdgeInsets.all(3.sp),
+                          child: Wrap(
+                            spacing: 3.sp,
+                            runSpacing: 3.sp,
+                            children: const [
+                              DashboardTabsWidget(),
+                              DashboardTabsWidget(),
+                              DashboardTabsWidget(),
+                            ],
+                          ),
+                        ),
+                        csvertSpace16,
+                      ]),
                     ),
                     Align(
                       alignment: Alignment.topCenter,

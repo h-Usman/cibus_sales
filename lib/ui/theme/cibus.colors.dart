@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 // Neutral
 const Color ccNetural1000 = Color(0xff000000);
+const Color ccNetural950 = Color(0xff111827);
 const Color ccNeutral900 = Color(0xff212134);
 const Color ccNeutral800 = Color(0xff32324d);
 const Color ccNeutral700 = Color(0xff4a4a6a);
@@ -18,6 +19,7 @@ const Color ccNatural250 = Color(0xffdedede);
 const Color ccNeutral200 = Color(0xffdcdce4);
 const Color ccNeutral180 = Color(0xffcdcdd7);
 const Color ccNeutral150 = Color(0xffeaeaef);
+const Color ccNeutral190 = Color(0xffeeeff2);
 const Color ccNeutral100 = Color(0xfff6f6f9);
 const Color ccNeutral0 = Color(0xffffffff);
 const Color ccBakground = Color(0xfff7f7f7);
@@ -26,6 +28,7 @@ const Color ccBakground = Color(0xfff7f7f7);
 const Color ccPrimary800 = Color(0xff0b0bfd);
 const Color ccPrimary700 = Color(0xff3a2d78);
 const Color ccPrimary600 = Color(0xff615793);
+const Color ccNutural580 = Color(0xff718096);
 const Color ccNutural550 = Color(0xff70708c);
 const Color ccPrimary500 = Color(0xff8981ae);
 const Color ccPrimary300 = Color(0xFFC7C5C5);
@@ -50,9 +53,11 @@ const Color ccTertiary100 = Color(0xffffd7c0);
 const Color ccTertiary50 = Color(0xfffff2ea);
 
 // Success
+const Color ccSuccess900 = Color(0xff0caf60);
 const Color ccSuccess800 = Color(0xff106946);
 const Color ccSuccess700 = Color(0xff24a44b);
 const Color ccSuccess500 = Color(0xff4ad775);
+const Color ccSuccess400 = Color(0xffbcf499);
 const Color ccSuccess200 = Color(0xffb4efc6);
 
 // Danger

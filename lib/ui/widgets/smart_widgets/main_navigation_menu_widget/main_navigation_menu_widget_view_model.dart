@@ -29,8 +29,8 @@ class MainNavigationMenuWidgetViewModel extends BaseViewModel {
         return _nav.navigateTo(Routes.homeView);
       case "orders":
         return _nav.navigateTo(Routes.ordersView);
-      case "meun":
-        return _nav.navigateTo(Routes.menuManagementMenuView);
+      case "sales":
+        return _nav.navigateTo(Routes.salesView);
       case "venue":
         return _nav.navigateTo(Routes.addNewVeuneView);
       case "qr":

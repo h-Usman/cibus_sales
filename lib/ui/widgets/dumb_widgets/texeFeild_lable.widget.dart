@@ -46,8 +46,9 @@ class TextFeildWidget extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: 5.054.sp, vertical: 0),
+                padding: EdgeInsets.only(
+                  left: 5.054.sp,
+                ),
                 child: TextField(
                   style: TextStyle(color: ccNutural550, fontSize: 3.956.sp),
                   // controller: TextEditingController(

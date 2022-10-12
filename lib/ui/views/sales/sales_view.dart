@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ui/theme/cibus.colors.dart';
 import 'package:flutter_application_1/ui/theme/cibus.theme.helpers.dart';
-import 'package:flutter_application_1/ui/widgets/dumb_widgets/order_list_item.widget.dart';
-import 'package:flutter_application_1/ui/widgets/dumb_widgets/leadsTabs/leads_tab.widget.dart';
+import 'package:flutter_application_1/ui/widgets/dumb_widgets/sales/sales_tabs.widget.dart';
+import 'package:flutter_application_1/ui/widgets/dumb_widgets/sales_list.widget.dart';
 import 'package:stacked/stacked.dart';
 import '../../widgets/dumb_widgets/footer.widget.dart';
 import '../../widgets/dumb_widgets/page_title.widget.dart';
@@ -11,28 +11,22 @@ import '../../widgets/smart_widgets/main_navigation_menu_widget/main_navigation_
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
-import './orders_view_model.dart';
+import './sales_view_model.dart';
 
-class OrdersView extends StatelessWidget {
+class SalesView extends StatelessWidget {
   final bool selectOrder = true;
-  const OrdersView({
-    Key? key,
-  }) : super(key: key);
-
-  get goToModalRequested => null;
-
-  get selected => null;
+  const SalesView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<OrdersViewModel>.reactive(
-      viewModelBuilder: () => OrdersViewModel(),
-      onModelReady: (OrdersViewModel model) async {
+    return ViewModelBuilder<SalesViewModel>.reactive(
+      viewModelBuilder: () => SalesViewModel(),
+      onModelReady: (SalesViewModel model) async {
         await model.init();
       },
       builder: (
         BuildContext context,
-        OrdersViewModel model,
+        SalesViewModel model,
         Widget? child,
       ) {
         return Container(
@@ -88,7 +82,7 @@ class OrdersView extends StatelessWidget {
                                             CrossAxisAlignment.center,
                                         children: const <Widget>[
                                           PageTitlewWidget(
-                                            titleName: 'Leads',
+                                            titleName: 'Sales',
                                           )
                                         ],
                                       ),
@@ -116,7 +110,7 @@ class OrdersView extends StatelessWidget {
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.center,
                                               children: [
-                                                LeadsTabsWidget(
+                                                SalesTabsWidget(
                                                   goToPageRequested: (val) =>
                                                       model.goToPage(val),
                                                   selectedTabName: 'all',
@@ -127,240 +121,51 @@ class OrdersView extends StatelessWidget {
                                           SizedBox(
                                             height: 10.98.sp,
                                             width: 112.38.sp,
-                                            child: selectOrder == true
-                                                ? Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Container(
-                                                        padding:
-                                                            EdgeInsets.only(
-                                                          right: 4.5.sp,
-                                                          // bottom: 5.sp,
-                                                        ),
-                                                        width: 63.131.sp,
-                                                        height: 7.47.sp,
-                                                        child: TextField(
-                                                          textAlign:
-                                                              TextAlign.left,
-                                                          decoration:
-                                                              InputDecoration(
-                                                            border:
-                                                                OutlineInputBorder(
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          1.098
-                                                                              .sp),
-                                                            ),
-                                                            contentPadding:
-                                                                EdgeInsets.all(
-                                                                    2.197.sp),
-                                                            filled: true,
-                                                            hintStyle:
-                                                                const TextStyle(
-                                                              color:
-                                                                  ccNutural550,
-                                                            ),
-                                                            hintText:
-                                                                "Type to Search",
-                                                            fillColor:
-                                                                ccNeutral0,
-                                                            suffixIcon:
-                                                                Container(
-                                                              padding:
-                                                                  EdgeInsets
-                                                                      .all(
-                                                                          2.sp),
-                                                              child: SvgPicture
-                                                                  .asset(
-                                                                "../assets/imges/search.svg",
-                                                                width: 3.736.sp,
-                                                                height:
-                                                                    3.736.sp,
-                                                              ),
-                                                            ),
-                                                          ),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.end,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                SizedBox(
+                                                  width: 63.131.sp,
+                                                  height: 7.47.sp,
+                                                  child: TextField(
+                                                    textAlign: TextAlign.left,
+                                                    decoration: InputDecoration(
+                                                      border:
+                                                          OutlineInputBorder(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(
+                                                                    1.098.sp),
+                                                      ),
+                                                      contentPadding:
+                                                          EdgeInsets.only(
+                                                        left: 2.197.sp,
+                                                      ),
+                                                      filled: true,
+                                                      hintStyle:
+                                                          const TextStyle(
+                                                        color: ccNutural550,
+                                                      ),
+                                                      hintText:
+                                                          "Type to Search",
+                                                      fillColor: ccNeutral0,
+                                                      suffixIcon: Container(
+                                                        padding: EdgeInsets.all(
+                                                            2.sp),
+                                                        child: SvgPicture.asset(
+                                                          "../assets/imges/search.svg",
+                                                          width: 3.736.sp,
+                                                          height: 3.736.sp,
                                                         ),
                                                       ),
-                                                      cshorzSpace2,
-                                                      Container(
-                                                        height: 7.47.sp,
-                                                        // width: 29.23.sp,
-                                                        color: ccNeutral0,
-                                                        // padding: EdgeInsets.only(
-                                                        //     left: 1.758.sp,
-                                                        //     right: 1.758.sp),
-                                                        child:
-                                                            ElevatedButton.icon(
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            backgroundColor:
-                                                                ccDanger300,
-                                                            padding:
-                                                                EdgeInsets.only(
-                                                                    left: 2.758
-                                                                        .sp,
-                                                                    right: 2.758
-                                                                        .sp), // foreground
-                                                          ),
-                                                          onPressed: () {},
-                                                          icon:
-                                                              SvgPicture.asset(
-                                                            "../assets/imges/add-new-white.svg",
-                                                            width: 3.51.sp,
-                                                            height: 4.39.sp,
-                                                          ),
-                                                          label: Text(
-                                                            'Add new',
-                                                            style:
-                                                                GoogleFonts.sen(
-                                                              color: ccNeutral0,
-                                                              fontSize: 4.39.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
-                                                            ),
-                                                          ), // <-- Text
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  )
-                                                : Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.end,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Container(
-                                                        height: 7.50.sp,
-                                                        width: 43.19.sp,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      1.098.sp),
-                                                          border: Border.all(
-                                                            color: ccNutural550,
-                                                          ),
-                                                        ),
-                                                        child:
-                                                            ElevatedButton.icon(
-                                                          onPressed: () {},
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            backgroundColor:
-                                                                ccNeutral0, // foreground
-                                                          ),
-                                                          icon:
-                                                              SvgPicture.asset(
-                                                            "../assets/imges/order.svg",
-                                                            width: 4.175.sp,
-                                                            height: 4.175.sp,
-                                                          ),
-                                                          label: Text(
-                                                            'Change Status',
-                                                            style:
-                                                                GoogleFonts.sen(
-                                                              color:
-                                                                  ccNutural550,
-                                                              fontSize: 4.39.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
-                                                            ),
-                                                          ), // <-- Text
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                        left: 4.39.sp,
-                                                      )),
-                                                      Container(
-                                                        height: 7.50.sp,
-                                                        width: 42.56.sp,
-                                                        // color: Colors.green,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      1.098.sp),
-                                                          border: Border.all(
-                                                              color:
-                                                                  ccNutural550),
-                                                        ),
-                                                        child:
-                                                            ElevatedButton.icon(
-                                                          onPressed: () {},
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            backgroundColor:
-                                                                ccNeutral0,
-                                                          ),
-                                                          icon:
-                                                              SvgPicture.asset(
-                                                            "../assets/imges/merge.svg",
-                                                            width: 3.29.sp,
-                                                            height: 3.29.sp,
-                                                          ),
-                                                          label: Text(
-                                                            'Merge Orders',
-                                                            style:
-                                                                GoogleFonts.sen(
-                                                              color:
-                                                                  ccNutural550,
-                                                              fontSize: 4.39.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
-                                                            ),
-                                                          ), // <-- Text
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                          padding:
-                                                              EdgeInsets.only(
-                                                        left: 4.39.sp,
-                                                      )),
-                                                      SizedBox(
-                                                        height: 7.50.sp,
-                                                        width: 29.23.sp,
-                                                        child:
-                                                            ElevatedButton.icon(
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            backgroundColor:
-                                                                ccDanger300, // foreground
-                                                          ),
-                                                          onPressed: () {},
-                                                          icon:
-                                                              SvgPicture.asset(
-                                                            "../assets/imges/delete-white.svg",
-                                                            width: 3.51.sp,
-                                                            height: 4.39.sp,
-                                                          ),
-                                                          label: Text(
-                                                            'Delete',
-                                                            style:
-                                                                GoogleFonts.sen(
-                                                              color: ccNeutral0,
-                                                              fontSize: 4.39.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400,
-                                                            ),
-                                                          ), // <-- Text
-                                                        ),
-                                                      ),
-                                                    ],
+                                                    ),
                                                   ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -475,22 +280,8 @@ class OrdersView extends StatelessWidget {
                                                                 .center,
                                                         children: <Widget>[
                                                           cshorzSpace3,
-                                                          SizedBox(
-                                                            height: 1.97.sp,
-                                                            width: 1.97.sp,
-                                                            child: Checkbox(
-                                                              value: false,
-                                                              onChanged:
-                                                                  (value) {
-                                                                // setState(() {
-                                                                //   _myBoolean = value; // rebuilds with new value
-                                                                // });
-                                                              },
-                                                            ),
-                                                          ),
-                                                          cshorzSpace3,
                                                           Text(
-                                                            "ID",
+                                                            "Sale ID",
                                                             style:
                                                                 GoogleFonts.sen(
                                                               color:
@@ -603,7 +394,7 @@ class OrdersView extends StatelessWidget {
                                                     ),
                                                     SizedBox(
                                                       height: 6.6.sp,
-                                                      width: 30.0989.sp,
+                                                      width: 35.0989.sp,
                                                       child: Row(
                                                         mainAxisAlignment:
                                                             MainAxisAlignment
@@ -614,7 +405,7 @@ class OrdersView extends StatelessWidget {
                                                         children: <Widget>[
                                                           SizedBox(
                                                             child: Text(
-                                                              "Date",
+                                                              "Sale Date",
                                                               style: GoogleFonts
                                                                   .sen(
                                                                 color:
@@ -658,15 +449,6 @@ class OrdersView extends StatelessWidget {
                                                                 ),
                                                               ),
                                                             ),
-                                                            cshorzSpace3,
-                                                            SizedBox(
-                                                              child:
-                                                                  Image.asset(
-                                                                "../assets/imges/filter-colored.png",
-                                                                width: 2.63.sp,
-                                                                height: 2.63.sp,
-                                                              ),
-                                                            ),
                                                           ],
                                                         ),
                                                       ),
@@ -680,14 +462,14 @@ class OrdersView extends StatelessWidget {
                                                     itemCount: 18,
                                                     itemBuilder:
                                                         (context, index) {
-                                                      return OrderListItemWidget(
+                                                      return SalesListItemWidget(
                                                         goToModalRequested:
                                                             () {},
                                                         selected: false,
-                                                        idNo: "1001",
+                                                        idNo: "5478",
                                                         shopN:
                                                             "Restaurant Chef n Stuff",
-                                                        status: "In Progress",
+                                                        status: "Paid",
                                                         date: "12/07/2022",
                                                         orderItemId: "1",
                                                         location:
